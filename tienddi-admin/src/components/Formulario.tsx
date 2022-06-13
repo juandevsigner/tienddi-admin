@@ -12,7 +12,7 @@ const Formulario = () => {
   const [error, setError] = useState(false);
   const [mensaje, setMensaje] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     if ([email, password].includes("")) {
       setError(true);
@@ -53,7 +53,7 @@ const Formulario = () => {
         <div className="relative">
           <div>
             <input
-              className="w-full p-2 focus:outline-none border-orange-400 placeholder:text-gray-100 py-2 px-3   placeholder:font-light mb-2 bg-transparent border-b"
+              className="w-full p-2 text-white focus:outline-none border-orange-400 placeholder:text-gray-100 py-2 px-3   placeholder:font-light mb-2 bg-transparent border-b"
               id="password"
               autoComplete="off"
               type="password"
@@ -76,7 +76,7 @@ const Formulario = () => {
           </div>
         </div>
         <input
-          className="bg-yellow-500 w-full my-5 rounded-full uppercase text-white p-2 cursor-pointer hover:bg-yellow-600 transition-colors"
+          className="bg-yellow-500 w-full my-5 rounded-full uppercase  text-white p-2 cursor-pointer hover:bg-yellow-600 transition-colors"
           type="submit"
           value="Iniciar Sesión"
         />
