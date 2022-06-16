@@ -1,54 +1,80 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useStateContext } from "../context/ContextProvider";
 import { RiHome3Line } from "react-icons/ri";
 import { BiCommentError } from "react-icons/bi";
 import { AiOutlineSetting } from "react-icons/ai";
+import { BsBagCheck } from "react-icons/bs";
+import { BsBagX } from "react-icons/bs";
 
 const Sidebar = () => {
+  const location = useLocation();
+  const urlActual = location.pathname;
+
   const { menuActivo } = useStateContext();
 
   return (
-    <div className="w-full bg-gray-100 h-screen">
+    <div className="w-full">
       {menuActivo && (
         <div className="flex flex-col px-10 gap-5 pt-10">
           <Link
-            className="flex justify-between bg-primary rounded-full text-white px-3 py-2"
+            className={`${
+              urlActual === "/administrador" && "text-white bg-primary"
+            } flex justify-between items-center py-3 px-3 rounded-full`}
             to={"/administrador"}
           >
             Inicio
-            <RiHome3Line className="text-xl" />
+            <RiHome3Line className="w-5 h-5" />
           </Link>
+
           <hr />
+
           <Link
-            className="flex justify-between px-3 py-2"
+            className={`${
+              urlActual === "/administrador/pedidos-realizados" &&
+              "text-white bg-primary"
+            } flex justify-between items-center py-3 px-3 rounded-full`}
             to={"/administrador/pedidos-realizados"}
           >
             Pedidos Realizados
-            <RiHome3Line className="text-xl" />
+            <BsBagCheck className="w-5 h-5" />
           </Link>
+
           <hr />
+
           <Link
-            className="flex justify-between px-3 py-2"
+            className={`${
+              urlActual === "/administrador/pedidos-cancelados" &&
+              "text-white bg-primary"
+            } flex justify-between items-center py-3 px-3 rounded-full`}
             to={"/administrador/pedidos-cancelados"}
           >
             Pedidos Cancelados
-            <RiHome3Line className="text-xl" />
+            <BsBagX className="w-5 h-5" />
           </Link>
+
           <hr />
+
           <Link
-            className="flex justify-between px-3 py-2"
+            className={`${
+              urlActual === "/administrador/reclamos" && "text-white bg-primary"
+            } flex justify-between items-center py-3 px-3 rounded-full`}
             to={"/administrador/reclamos"}
           >
             Quejas y Reclamos
-            <BiCommentError className="text-xl" />
+            <BiCommentError className="w-5 h-5" />
           </Link>
+
           <hr />
+
           <Link
-            className="flex justify-between px-3 py-2"
+            className={`${
+              urlActual === "/administrador/configuracion" &&
+              "text-white bg-primary"
+            } flex justify-between items-center py-3 px-3 rounded-full`}
             to={"/administrador/configuracion"}
           >
             Configuración
-            <AiOutlineSetting className="text-xl" />
+            <AiOutlineSetting className="w-5 h-5" />
           </Link>
         </div>
       )}

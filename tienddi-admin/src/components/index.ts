@@ -4,3 +4,4 @@ export { default as FormularioCambiarPass } from "./FormularioCambiarPass";
 export { default as Navbar } from "./Navbar";
 export { default as Sidebar } from "./Sidebar";
 export { default as FormularioRecuperar } from "./FormularioRecuperar";
+export { default as BotonesFlotantes } from "./BotonesFlotantes";

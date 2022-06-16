@@ -7,3 +7,10 @@ body {
   padding: 0;
   font-family: "Montserrat", sans-serif;
 }
+
+.home::-webkit-scrollbar {
+  width: 15px;
+}
+.home::-webkit-scrollbar-thumb {
+  background-color: #fc6357;
+}

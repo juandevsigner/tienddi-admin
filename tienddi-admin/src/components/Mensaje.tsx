@@ -1,6 +1,10 @@
 import { BiError } from "react-icons/bi";
 
-const Mensaje = ({ mensaje }) => {
+interface Props {
+  mensaje: string;
+}
+
+const Mensaje = ({ mensaje }: Props) => {
   return (
     <div className="bg-red-800 p-1 mb-5 flex justify-center rounded-full items-center gap-2">
       <span className="text-white">
