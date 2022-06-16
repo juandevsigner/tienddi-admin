@@ -13,6 +13,8 @@ import {
   PedidosRealizados,
   MensajeCambioPassword,
   MensajeConfirmacion,
+  QuejasReclamos,
+  Configuracion,
 } from "../pages";
 
 const AllRoutes = () => {
@@ -39,6 +41,8 @@ const AllRoutes = () => {
           <Route index element={<Home />} />
           <Route path="pedidos-cancelados" element={<PedidosCancelados />} />
           <Route path="pedidos-realizados" element={<PedidosRealizados />} />
+          <Route path="reclamos" element={<QuejasReclamos />} />
+          <Route path="configuracion" element={<Configuracion />} />
         </Route>
       </Routes>
     </BrowserRouter>
