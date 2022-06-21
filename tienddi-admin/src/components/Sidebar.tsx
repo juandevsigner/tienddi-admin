@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useStateContext } from "../context/ContextProvider";
 import { RiHome3Line } from "react-icons/ri";
 import { BiCommentError } from "react-icons/bi";

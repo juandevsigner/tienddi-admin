@@ -18,6 +18,7 @@ const Layout = () => {
         >
           <Sidebar />
         </div>
+
         <div
           className={`${
             menuActivo ? "hidden md:block lg:w-3/5 xl:w-4/6" : "w-full"

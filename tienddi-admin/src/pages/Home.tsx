@@ -4,9 +4,12 @@ import { pedidos } from "../data/pedidos";
 
 const Home = () => {
   return (
-    <>
-      <div className="home h-auto lg:h-screen lg:overflow-y-scroll grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-3 p-5">
-        <div className="bg-gray-100 rounded-2xl shadow-lg">
+    <div className="barra p-5  h-auto lg:h-screen lg:overflow-y-scroll">
+      <h2 className="text-center mb-5 text-xl uppercase text-primary">
+        - Resumen -
+      </h2>
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-3 ">
+        <div className="bg-white rounded-2xl ">
           <PedidosCard
             titulo={"Pendientes"}
             cantidad={pedidos.length}
@@ -21,7 +24,7 @@ const Home = () => {
             />
           ))}
         </div>
-        <div className="bg-gray-100 rounded-2xl shadow-lg">
+        <div className="bg-white rounded-2xl ">
           <PedidosCard
             titulo={"Preparando"}
             cantidad={pedidos.length}
@@ -36,7 +39,7 @@ const Home = () => {
             />
           ))}
         </div>
-        <div className="bg-gray-100 rounded-2xl shadow-lg">
+        <div className="bg-white rounded-2xl ">
           <PedidosCard
             titulo={"Despachados"}
             cantidad={pedidos.length}
@@ -51,7 +54,7 @@ const Home = () => {
             />
           ))}
         </div>
-        <div className="bg-gray-100 rounded-2xl shadow-lg">
+        <div className="bg-white rounded-2xl ">
           <PedidosCard
             titulo={"Finalizados"}
             cantidad={pedidos.length}
@@ -67,7 +70,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
